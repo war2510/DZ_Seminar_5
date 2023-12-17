@@ -1,113 +1,118 @@
-﻿//Задача 1: Напишите программу, которая на вход принимает позиции элемента в двумерном массиве, и возвращает значение этого элемента или же указание, что такого элемента нет.
-//  {
-        // Создаем двумерный массив (например, 3x3)
-        // int[,] array = new int[,]
-        // {
-        //     { 1, 2, 3 },
-        //     { 4, 5, 6 },
-        //     { 7, 8, 9 }
-        // };
+﻿// Random random = new Random();
+// // Функция для заполнения двухмерного массива случайными значениями
+// void CreateArray(int[,] array)
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             array[i, j] = random.Next(10, 100);
+//         }
+//     }
+// }
 
-        // Получаем позиции элемента от пользователя
-        // Console.Write("Введите номер строки: ");
-        // int row = int.Parse(Console.ReadLine());
+// // Функция для печати двухмерного массива
+// void PrintArray(int[,] array)
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             Console.Write(array[i, j] + " ");
+//         }
+//         Console.WriteLine();
+//     }
+//     Console.WriteLine();
+// }
 
-        // Console.Write("Введите номер столбца: ");
-        // int column = int.Parse(Console.ReadLine());
+// // Задача 1: Напишите программу, которая на вход принимает позиции элемента в двумерном массиве, и возвращает значение этого элемента или же указание, что такого элемента нет.
+// {
+//     int[,] array = new int[3, 3];
+// CreateArray(array);
+// // Вводим координаты элемента
+//         Console.Write("Введите номер строки: ");
+//         int row = int.Parse(Console.ReadLine());
 
-        // Проверяем, что введенные позиции находятся в пределах массива
-        // if (row >= 0 && row < array.GetLength(0) && column >= 0 && column < array.GetLength(1))
-        // {
-            // Возвращаем значение элемента
-    //         int value = array[row, column];
-    //         Console.WriteLine($"Значение элемента [{row}, {column}]: {value}");
-    //     }
-    //     else
-    //     {
-    //         Console.WriteLine("Указанные позиции находятся за пределами массива.");
-    //     }
-    // }
+//         Console.Write("Введите номер столбца: ");
+//         int col = int.Parse(Console.ReadLine());
 
+//         // Получаем значение элемента или выводим сообщение о его отсутствии
+//         int result = GetElement(array, row, col);
+//         if (result != int.MinValue)
+//         {
+//             Console.WriteLine($"Значение элемента [{row}, {col}] равно {result}");
+//         }
+//         else
+//         {
+//             Console.WriteLine($"Элемента с координатами [{row}, {col}] нет в массиве");
+//         }
+//     }
+
+//     static int GetElement(int[,] array, int row, int col)
+//     {
+//         // Проверяем, находятся ли указанные координаты в пределах массива
+//         if (row >= 0 && row < array.GetLength(0) && col >= 0 && col < array.GetLength(1))
+//         {
+//             // Возвращаем значение элемента
+//             return array[row, col];
+//         }
+//         else
+//         {
+//             // Если координаты выходят за пределы массива, возвращаем специальное значение (например, int.MinValue) 
+//             // для обозначения отсутствия элемента с такими координатами
+//             return int.MinValue;
+//         }
+//     }
 
 
 // Задача 2: Задайте двумерный массив. Напишите программу, которая поменяет местами первую и последнюю строку массива.
-//  {
-        // Создаем двумерный массив (например, 3x3)
-        // int[,] array = new int[,]
-        // {
-        //     { 1, 2, 3 },
-        //     { 4, 5, 6 },
-        //     { 7, 8, 9 }
-        // };
+//     {   
+//          {
+//         // Создаем и инициализируем двумерный массив
+//         int[,] array = {
+//             {1, 2, 3},
+//             {4, 5, 6},
+//             {7, 8, 9}
+//         };
+//        Console.WriteLine("Исходный массив:");
+//         PrintArray(array);
 
-        // Меняем местами первую и последнюю строки
-        // int rowCount = array.GetLength(0);
-        // int columnCount = array.GetLength(1);
+//         // Меняем местами первую и последнюю строки
+//         SwapRows(array, 0, array.GetLength(0) - 1);
 
-        // for (int i = 0; i < columnCount; i++)
-        // {
-        //     int temp = array[0, i];
-        //     array[0, i] = array[rowCount - 1, i];
-        //     array[rowCount - 1, i] = temp;
-        // }
+//         Console.WriteLine("Массив после замены строк:");
+//         PrintArray(array);
+//     }
 
-        // Выводим измененный массив
-    //     Console.WriteLine("Измененный массив:");
-    //     for (int row = 0; row < rowCount; row++)
-    //     {
-    //         for (int col = 0; col < columnCount; col++)
-    //         {
-    //             Console.Write(array[row, col] + " ");
-    //         }
-    //         Console.WriteLine();
-    //     }
-    // }
+//     // Функция для печати двумерного массива
+//     static void PrintArray(int[,] array)
+//     {
+//         for (int i = 0; i < array.GetLength(0); i++)
+//         {
+//             for (int j = 0; j < array.GetLength(1); j++)
+//             {
+//                 Console.Write(array[i, j] + " ");
+//             }
+//             Console.WriteLine();
+//         }
+//         Console.WriteLine();
+//     }
 
-
-
-//  Задача 3: Задайте прямоугольный двумерный массив. Напишите программу, которая будет находить строку с наименьшей суммой элементов.
-//  {
-        // Создаем прямоугольный двумерный массив (например, 3x4)
-        // int[,] array = new int[,]
-        // {
-        //     { 1, 2, 3, 4 },
-        //     { 5, 6, 7, 8 },
-        //     { 9, 10, 11, 12 }
-        // };
-
-        // Находим строку с наименьшей суммой элементов
-    //     int minSum = int.MaxValue;
-    //     int minSumRowIndex = -1;
-
-    //     for (int row = 0; row < array.GetLength(0); row++)
-    //     {
-    //         int rowSum = 0;
-    //         for (int col = 0; col < array.GetLength(1); col++)
-    //         {
-    //             rowSum += array[row, col];
-    //         }
-
-    //         if (rowSum < minSum)
-    //         {
-    //             minSum = rowSum;
-    //             minSumRowIndex = row;
-    //         }
-    //     }
-
-    //     if (minSumRowIndex != -1)
-    //     {
-    //         Console.WriteLine($"Строка с наименьшей суммой элементов: {minSumRowIndex}");
-    //     }
-    //     else
-    //     {
-    //         Console.WriteLine("Массив пуст.");
-    //     }
-    // }
+//     // Функция для обмена местами двух строк в двумерном массиве
+//     static void SwapRows(int[,] array, int row1, int row2)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             int temp = array[row1, j];
+//             array[row1, j] = array[row2, j];
+//             array[row2, j] = temp;
+//         }
+//     }
+// }   
 
 
-    // Задача 4*(не обязательная): Задайте двумерный массив из целых чисел. Напишите программу, которая удалит строку и столбец, на пересечении которых расположен наименьший элемент массива. Под удалением понимается создание нового двумерного массива без строки и столбца
-
-    // {
+// Задача 3: Задайте прямоугольный двумерный массив. Напишите программу, которая будет находить строку с наименьшей суммой элементов.
+// {
         // Создаем двумерный массив (например, 3x3)
         // int[,] array = new int[,]
         // {
