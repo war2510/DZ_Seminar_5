@@ -12,3 +12,4 @@ C:\Users\igor\Desktop\DZ_Seminar_5\obj\Debug\net8.0\refint\DZ_Seminar_5.dll
 C:\Users\igor\Desktop\DZ_Seminar_5\obj\Debug\net8.0\DZ_Seminar_5.pdb
 C:\Users\igor\Desktop\DZ_Seminar_5\obj\Debug\net8.0\DZ_Seminar_5.genruntimeconfig.cache
 C:\Users\igor\Desktop\DZ_Seminar_5\obj\Debug\net8.0\ref\DZ_Seminar_5.dll
+C:\Users\igor\Desktop\DZ_Seminar_5\obj\Debug\net8.0\DZ_Seminar_5.sourcelink.json
